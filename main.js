@@ -1,9 +1,18 @@
 var alphabetLower = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 
-for (var i = 0; i < alphabetLower.length; i++;) {
-  console.log(i);
+function processAlphabet() {
+  for (var i = 0; i < alphabetLower.length; i++) {
+    createLettersDiv(alphabetLower[i]);
+  }
 }
 
+function createLettersDiv (letter) {
+
+  var div = document.createElement("div");
+  div.className = "letters";
+  div.innerHTML = div.innerHTML + letter;
+  document.body.appendChild(div);
+}
 
 /*for (var i = 0; i < alphabetLower.length; i++) {
   function createLetters() {
@@ -26,3 +35,4 @@ alphabetLower.forEach(createLettersDiv);
 // a[0] = 2
 // a[1] = 5
 // a[2] = 9
+*/
