@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>
-   Letter Explosion - Learn Letters
-  </title>
-  <script src="main.js"></script>
-  <link href="main.css" rel="stylesheet" type="text/css">
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-  <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
-</head>
-<body>
-  <div id='controls'>
-    <a class="button" href="#">Reset</a>
-    <audio controls>
-      <source src="a.mp3" type="audio/mpeg">
-      Your browser does not support this audio format.
-    </audio>
-  </div>
+  <head>
+    <title>
+      Letter Explosion - Learn Letters
+    </title>
+    <script src="main.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <link href="main.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <div id='controls'>
+      <a class="button" href="#">Reset</a>
+      <audio controls>
+        <source id='track' src="a.mp3" type="audio/mpeg">
+        Your browser does not support this audio format.
+      </audio>
+    </div>
 
-  <script>
-   processAlphabet();
-   listenForClick;
-  </script>
-</body>
+    <script>
+      processAlphabet();
+      getCurrentLetter();
+    </script>
+  </body>
 </html>
