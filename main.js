@@ -23,10 +23,11 @@ function getRandomInt (min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-function setAudioSource () {
+function setAudioSource (current_letter) {
   source = document.getElementById('track');
-  source.src = current_letter + '.mp3';
+  console.log(source);
+  source_attribute = source.setAttribute = current_letter + '.mp3';
+  console.log(source_attribute);
 }
-
 
 
