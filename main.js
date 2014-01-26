@@ -9,8 +9,9 @@ function processAlphabet() {
 function createLettersDiv (letter) {
 
   var div = document.createElement("div");
-  div.className = "letters";
+  div.className = "letters " + letter;
   div.innerHTML = div.innerHTML + letter;
   document.body.appendChild(div);
 }
+
 
