@@ -14,4 +14,21 @@ function createLettersDiv (letter) {
   document.body.appendChild(div);
 }
 
+var current_letter = '';
+
+function getCurrentLetter () {
+  var current_letter = alphabetLower[getRandomInt(0,25)];
+  setAudioSource(current_letter);
+}
+
+function getRandomInt (min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function setAudioSource () {
+  source = document.getElementById('track');
+  source.src = current_letter + '.mp3';
+}
+
+
 
