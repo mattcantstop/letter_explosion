@@ -14,8 +14,6 @@ function createLettersDiv (letter) {
   document.body.appendChild(div);
 }
 
-var current_letter = '';
-
 function getCurrentLetter () {
   var current_letter = alphabetLower[getRandomInt(0,25)];
   setAudioSource(current_letter);
