@@ -25,9 +25,8 @@ function getRandomInt (min, max) {
 
 function setAudioSource (current_letter) {
   source = document.getElementById('track');
-  console.log(source);
-  source_attribute = source.setAttribute = current_letter + '.mp3';
-  console.log(source_attribute);
+  var new_file_name = current_letter + '.mp3'
+  $(source).attr('src', new_file_name);
 }
 
 
