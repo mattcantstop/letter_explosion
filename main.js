@@ -15,7 +15,7 @@ function createLettersDiv (letter) {
 }
 
 function getCurrentLetter () {
-  var current_letter = alphabetLower[getRandomInt(0,25)];
+ var current_letter = alphabetLower[getRandomInt(0,25)];
   setAudioSource(current_letter);
 }
 
@@ -27,6 +27,7 @@ function setAudioSource (current_letter) {
   source = document.getElementById('track');
   console.log(source);
   source_attribute = source.setAttribute = current_letter + '.mp3';
+  console.log(source_attribute);
   console.log(source_attribute);
 }
 
