@@ -28,7 +28,6 @@ function setAudioSource (current_letter) {
   console.log(source);
   source_attribute = source.setAttribute = current_letter + '.mp3';
   console.log(source_attribute);
-  console.log(source_attribute);
 }
 
 
