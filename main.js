@@ -17,6 +17,7 @@ function createLettersDiv (letter) {
 function getCurrentLetter () {
  var currentLetter = alphabetLower[getRandomInt(0,25)];
   setAudioSource(currentLetter);
+  currentLetterAddExplosion(currentLetter);
 }
 
 function getRandomInt (min, max) {
@@ -29,4 +30,7 @@ function setAudioSource (currentLetter) {
   $(source).attr('src', new_file_name);
 }
 
-
+function currentLetterAddExplosion (currentLetter) {
+  var currentLetterClass = document.getElementsByClassName('letters ' + currentLetter);
+  console.log(currentLetterClass);
+}
