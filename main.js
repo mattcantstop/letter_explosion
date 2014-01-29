@@ -24,9 +24,14 @@ function getRandomInt (min, max) {
 }
 
 function setAudioSource (current_letter) {
-  source = document.getElementById('track');
+  var source = document.getElementById('track');
   var new_file_name = current_letter + '.mp3'
   $(source).attr('src', new_file_name);
 }
 
-
+function setCurrentLetterForExplosion (letter) {
+  var current_letter = letter;
+  $('letter_' + current_letter).onclick() {
+    //something
+  }
+ }
