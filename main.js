@@ -23,9 +23,9 @@ function getRandomInt (min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-function setAudioSource (current_letter) {
+function setAudioSource (currentLetter) {
   source = document.getElementById('track');
-  var new_file_name = current_letter + '.mp3'
+  var new_file_name = currentLetter + '.mp3'
   $(source).attr('src', new_file_name);
 }
 
