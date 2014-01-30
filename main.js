@@ -33,4 +33,5 @@ function setAudioSource (currentLetter) {
 function currentLetterAddExplosion (currentLetter) {
   var currentLetterClass = document.getElementsByClassName('letters ' + currentLetter);
   console.log(currentLetterClass);
+  $(currentLetterClass).attr('class', 'letters ' + currentLetter + ' exlode');
 }

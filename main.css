@@ -36,4 +36,6 @@ a.button:hover {
   color: white;
 }
 
-
+.letters.explode {
+  border: solid red 5px;
+}
