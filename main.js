@@ -9,7 +9,8 @@ function processAlphabet() {
 function createLettersDiv (letter) {
 
   var div = document.createElement("div");
-  div.className = "letters " + letter;
+  div.className = "letters";
+  div.id = letter;
   div.innerHTML = div.innerHTML + letter;
   document.body.appendChild(div);
 }
@@ -31,7 +32,7 @@ function setAudioSource (currentLetter) {
 }
 
 function currentLetterAddExplosion (currentLetter) {
-  var currentLetterClass = document.getElementsByClassName('letters ' + currentLetter);
+  var currentLetterClass = document.getElementById(currentLetter);
   console.log(currentLetterClass);
-  $(currentLetterClass).attr('class', 'letters ' + currentLetter + ' exlode');
+  $(currentLetterClass).attr('class', 'letters '+ 'explode');
 }
