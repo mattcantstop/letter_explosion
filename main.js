@@ -32,12 +32,8 @@ function setAudioSource (currentLetter) {
 }
 
 function currentLetterClickableAndExplosion (currentLetter) {
-  var currentLetterId = document.getElementById(currentLetter);
-  $(currentLetterId).click(currentLetterAddExplosionClass(currentLetter));
-}
-
-function currentLetterAddExplosionClass (currentLetter) {
-  var currentLetterId = document.getElementById(currentLetter);
-  $(currentLetterId).attr('class', 'letters '+ 'explode');
+  $("#" + currentLetter + ".letters").click(function() {
+    $(this).attr('class', 'letters explode');
+  });
 }
 
