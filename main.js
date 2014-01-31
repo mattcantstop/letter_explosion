@@ -18,7 +18,7 @@ function createLettersDiv (letter) {
 function getCurrentLetter () {
  var currentLetter = alphabetLower[getRandomInt(0,25)];
   setAudioSource(currentLetter);
-  currentLetterClickableAndExlplosion(currentLetter);
+  currentLetterClickableAndExplosion(currentLetter);
 }
 
 function getRandomInt (min, max) {
@@ -31,14 +31,10 @@ function setAudioSource (currentLetter) {
   $(source).attr('src', new_file_name);
 }
 
-function currentLetterAddExplosion (currentLetter) {
-  var currentLetterClass = document.getElementById(currentLetter);
-  console.log(currentLetterClass);
-  $(currentLetterClass).attr('class', 'letters '+ 'explode');
-}
-
-function currentLetterClickableAndExlplosion(currentLetter) {
+function currentLetterClickableAndExplosion (currentLetter) {
   var currentLetterId = document.getElementById(currentLetter);
-  $(currentLetterId).attr('click',"currentLetterAddExplosion(currentLetter)");
-  currentLetterAddExplosion(currentLetter);
+  $(currentLetterId).click( function currentLetterAddExplosion (currentLetter) {
+    var currentLetterId = document.getElementById(currentLetter);
+    $(currentLetterId).attr('class', 'letters '+ 'explode');
+  });
 }
