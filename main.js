@@ -34,6 +34,7 @@ function setAudioSource (currentLetter) {
 function currentLetterClickableAndExplosion (currentLetter) {
   $("#" + currentLetter + ".letters").click(function() {
     $(this).attr('class', 'letters explode');
+    getCurrentLetter();
   });
 }
 
