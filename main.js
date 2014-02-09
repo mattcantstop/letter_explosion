@@ -17,6 +17,7 @@ function createLettersDiv (letter) {
 
 function getCurrentLetter () {
  var currentLetter = alphabetLower[getRandomInt(0,25)];
+  console.log(currentLetter);
   setAudioSource(currentLetter);
   currentLetterClickableAndExplosion(currentLetter);
 }
