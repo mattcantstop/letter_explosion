@@ -30,6 +30,7 @@ function setAudioSource (currentLetter) {
   var source = document.getElementById('track');
   var new_file_name = currentLetter + '.mp3'
   $(source).attr('src', new_file_name);
+  console.log(source);
 }
 
 function currentLetterClickableAndExplosion (currentLetter) {
