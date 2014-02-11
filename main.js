@@ -23,7 +23,16 @@ function getCurrentLetter () {
 }
 
 function getRandomInt (min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
+  var nums = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25];
+  var usedNums = [];
+  var selectedNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+  usedNums.push(selectedNumber);
+  if (inArray(usedNums, selectedNumber)) {
+    getRandomInt (min, max);
+  }
+  else {
+    return selected_number;
+  }
 }
 
 function setAudioSource (currentLetter) {
@@ -40,3 +49,9 @@ function currentLetterClickableAndExplosion (currentLetter) {
   });
 }
 
+function inArray(array, value) {
+  for (var i = 0; i < array.length; i++) {
+    if (array[i] == value) return true;
+  }
+  return false;
+}
