@@ -2,12 +2,12 @@ var alphabetLower = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o"
 var alphabetUpper = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","X","Y","Z"];
 var numbers       = [1,2,3,4,5,6,7,8,8,10,11,12,13,14,15,16,17,18,19,20];
 
-
 function processNewAndRemoveFormerCollection(collection) {
   parentNodeId = "collection_container";
   removeCurrentCollection(parentNodeId);
   for (var i = 0; i < collection.length; i++) {
     createEachObjectDiv(collection[i], "collection_container");
+  getCurrentLetter();
   }
 }
 
