@@ -4,9 +4,7 @@ var numbers       = [1,2,3,4,5,6,7,8,8,10,11,12,13,14,15,16,17,18,19,20];
 
 function processNewAndRemoveFormerCollection(collection) {
   parentNodeId = "collection_container";
-  if (collection != alphabetLower) {
-    removeCurrentCollection(parentNodeId);
-  }
+  removeCurrentCollection(parentNodeId);
   for (var i = 0; i < collection.length; i++) {
     createEachObjectDiv(collection[i], "collection_container");
   }
