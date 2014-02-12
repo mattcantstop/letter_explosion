@@ -16,7 +16,7 @@ function createLettersDiv (letter) {
 }
 
 function getCurrentLetter () {
- var currentLetter = alphabetLower.splice([getRandomInt(0,25)],1);
+ var currentLetter = alphabetLower.splice([getRandomInt(0,alphabetLower.length)],1);
   console.log(currentLetter);
   setAudioSource(currentLetter);
   currentLetterClickableAndExplosion(currentLetter);
