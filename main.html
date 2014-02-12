@@ -15,9 +15,9 @@
     <div id="sub_nav">
       <a class="button" onclick="processCollection(alphabetLower)">alphabet</a>
       <a class="button" onclick="processCollection(alphabetUpper)">ALPHABET</a>
-      <a class="button" href="#">123456789</a>
-      <a class="button" href="#">Red</a>
-      <a class="button" href="#">Shapes</a>
+      <a class="button" onclick="processCollection(numbers)">123456789</a>
+      <a class="button" onclick="processCollection(colors)">Red</a>
+      <a class="button" onclick="processCollection(shapes)">Shapes</a>
     </div>
     <div>
       <audio id="audio" controls>
@@ -28,7 +28,7 @@
   </div>
 
     <script>
-      processCollection();
+      processCollection(alphabetLower);
       getCurrentLetter();
     </script>
   </body>
