@@ -3,19 +3,20 @@ var alphabetUpper = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O"
 var numbers       = [1,2,3,4,5,6,7,8,8,10,11,12,13,14,15,16,17,18,19,20];
 
 
-function processCollection(collection) {
+function processNewAndRemoveFormerCollection(collection) {
+  parentNodeId = "collection_container";
+  removeCurrentCollection(parentNodeId);
   for (var i = 0; i < collection.length; i++) {
-    createEachObjectDiv(collection[i]);
+    createEachObjectDiv(collection[i], "collection_container");
   }
 }
 
-function createEachObjectDiv (objectFromCollection) {
-
-  var div = document.createElement("div");
-  div.className = "letters";
-  div.id = objectFromCollection;
-  div.innerHTML = div.innerHTML + objectFromCollection;
-  document.body.appendChild(div);
+function createEachObjectDiv (objectFromCollection,parentDivId) {
+  var childDiv = document.createElement("div");
+  childDiv.className = "letters";
+  childDiv.id = objectFromCollection;
+  childDiv.innerHTML = childDiv.innerHTML + objectFromCollection;
+  document.getElementById(parentDivId).appendChild(childDiv);
 }
 
 function getCurrentLetter () {
@@ -59,4 +60,12 @@ function inArray(array, value) {
   console.log("inside inArray");
   usedNums.push(value);
   return false;
+}
+
+function removeCurrentCollection(parentNodeId) {
+  var el = document.getElementById(parentNodeId);
+  console.log(el);
+  while( el.hasChildNodes() ){
+    el.removeChild(el.lastChild);
+}
 }

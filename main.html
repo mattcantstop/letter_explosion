@@ -13,11 +13,11 @@
   <body>
   <div id='controls'>
     <div id="sub_nav">
-      <a class="button" onclick="processCollection(alphabetLower)">alphabet</a>
-      <a class="button" onclick="processCollection(alphabetUpper)">ALPHABET</a>
-      <a class="button" onclick="processCollection(numbers)">123456789</a>
-      <a class="button" onclick="processCollection(colors)">Red</a>
-      <a class="button" onclick="processCollection(shapes)">Shapes</a>
+      <a class="button" onclick="processNewAndRemoveFormerCollection(alphabetLower)">alphabet</a>
+      <a class="button" onclick="processNewAndRemoveFormerCollection(alphabetUpper)">ALPHABET</a>
+      <a class="button" onclick="processNewAndRemoveFormerCollection(numbers)">123456789</a>
+      <a class="button" onclick="processNewAndRemoveFormerCollection(colors)">Red</a>
+      <a class="button" onclick="processNewAndRemoveFormerCollection(shapes)">Shapes</a>
     </div>
     <div>
       <audio id="audio" controls>
@@ -27,8 +27,10 @@
     </div>
   </div>
 
+  <div id="collection_container">
+  </div>
     <script>
-      processCollection(alphabetLower);
+      processNewAndRemoveFormerCollection(alphabetLower);
       getCurrentLetter();
     </script>
   </body>
