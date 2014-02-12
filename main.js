@@ -4,10 +4,11 @@ var numbers       = [1,2,3,4,5,6,7,8,8,10,11,12,13,14,15,16,17,18,19,20];
 
 function processNewAndRemoveFormerCollection(collection) {
   parentNodeId = "collection_container";
-  removeCurrentCollection(parentNodeId);
+  if (collection != alphabetLower) {
+    removeCurrentCollection(parentNodeId);
+  }
   for (var i = 0; i < collection.length; i++) {
     createEachObjectDiv(collection[i], "collection_container");
-  getCurrentLetter();
   }
 }
 
@@ -57,7 +58,6 @@ function inArray(array, value) {
   for (var i = 0; i < array.length; i++) {
     if (array[i] == value) return true;
   }
-  console.log("inside inArray");
   usedNums.push(value);
   return false;
 }
