@@ -1,17 +1,17 @@
 var alphabetLower = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 
-function processAlphabet() {
-  for (var i = 0; i < alphabetLower.length; i++) {
-    createLettersDiv(alphabetLower[i]);
+function processCollection(collection) {
+  for (var i = 0; i < collection.length; i++) {
+    createEachObjectDiv(collection[i]);
   }
 }
 
-function createLettersDiv (letter) {
+function createEachObjectDiv (objectFromCollection) {
 
   var div = document.createElement("div");
   div.className = "letters";
-  div.id = letter;
-  div.innerHTML = div.innerHTML + letter;
+  div.id = objectFromCollection;
+  div.innerHTML = div.innerHTML + objectFromCollection;
   document.body.appendChild(div);
 }
 
