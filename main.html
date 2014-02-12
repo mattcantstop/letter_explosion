@@ -11,15 +11,21 @@
     <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
   </head>
   <body>
-    <div id='controls'>
-      <div class='collection_select'>
-      </div>
-      <a class="button" href="#">Reset</a>
+  <div id='controls'>
+    <div id="sub_nav">
+      <a class="button" onclick="processCollection(alphabetLower)">alphabet</a>
+      <a class="button" onclick="processCollection(alphabetUpper)">ALPHABET</a>
+      <a class="button" href="#">123456789</a>
+      <a class="button" href="#">Red</a>
+      <a class="button" href="#">Shapes</a>
+    </div>
+    <div>
       <audio id="audio" controls>
         <source id='track' src="a.mp3" type="audio/mpeg">
         Your browser does not support this audio format.
       </audio>
     </div>
+  </div>
 
     <script>
       processCollection();
