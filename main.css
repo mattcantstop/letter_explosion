@@ -7,7 +7,7 @@
   text-align: center;
 }
 
-.letters {
+.collection_object {
   margin: auto 0;
   text-align: center;
   background-color: #479DD9;
@@ -20,7 +20,7 @@
   -webkit-border-radius: 2px;
 }
 
-.letters.explode {
+.collection_object.explode {
   opacity: 0.3;
 }
 

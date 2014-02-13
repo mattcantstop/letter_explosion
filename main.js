@@ -15,7 +15,7 @@ function processNewAndRemoveFormerCollection(collection) {
 
 function createEachObjectDiv (objectFromCollection,parentDivId) {
   var childDiv = document.createElement("div");
-  childDiv.className = "letters";
+  childDiv.className = "collection_object";
   childDiv.id = objectFromCollection;
   childDiv.innerHTML = childDiv.innerHTML + objectFromCollection;
   document.getElementById(parentDivId).appendChild(childDiv);
@@ -50,8 +50,8 @@ function setAudioSource (activeSelection) {
 }
 
 function activeSelectionClickableAndExplosion (activeSelection) {
-  $("#" + activeSelection + ".letters").click(function() {
-    $(this).attr('class', 'letters explode');
+  $("#" + activeSelection + ".collection_object").click(function() {
+    $(this).attr('class', 'collection_object explode');
     getActiveSelection();
   });
 }
@@ -66,8 +66,7 @@ function inArray(array, value) {
 
 function removeCurrentCollection(parentNodeId) {
   var el = document.getElementById(parentNodeId);
-  console.log(el);
   while( el.hasChildNodes() ){
     el.removeChild(el.lastChild);
-}
+  }
 }
