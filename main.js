@@ -8,6 +8,7 @@ function processNewAndRemoveFormerCollection(collection) {
   for (var i = 0; i < collection.length; i++) {
     createEachObjectDiv(collection[i], "collection_container");
   }
+  getCurrentLetter(collection);
 }
 
 function createEachObjectDiv (objectFromCollection,parentDivId) {
@@ -18,8 +19,8 @@ function createEachObjectDiv (objectFromCollection,parentDivId) {
   document.getElementById(parentDivId).appendChild(childDiv);
 }
 
-function getCurrentLetter () {
- var currentLetter = alphabetLower.splice([getRandomInt(0,alphabetLower.length)],1);
+function getCurrentLetter (currentCollection) {
+ var currentLetter = currentCollection.splice([getRandomInt(0,currentCollection.length)],1);
   console.log(currentLetter);
   setAudioSource(currentLetter);
   currentLetterClickableAndExplosion(currentLetter);
@@ -46,7 +47,7 @@ function setAudioSource (currentLetter) {
 }
 
 function currentLetterClickableAndExplosion (currentLetter) {
-  $("#" + currentLetter + ".letters").click(function() {
+  $("#" + currentLetter.toLowerCase() + ".letters").click(function() {
     $(this).attr('class', 'letters explode');
     getCurrentLetter();
   });
