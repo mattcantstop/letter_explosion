@@ -8,7 +8,7 @@ function processNewAndRemoveFormerCollection(collection) {
   for (var i = 0; i < collection.length; i++) {
     createEachObjectDiv(collection[i], "collection_container");
   }
-  getCurrentLetter(collection);
+  getActiveSelection(collection);
 }
 
 function createEachObjectDiv (objectFromCollection,parentDivId) {
@@ -19,11 +19,11 @@ function createEachObjectDiv (objectFromCollection,parentDivId) {
   document.getElementById(parentDivId).appendChild(childDiv);
 }
 
-function getCurrentLetter (currentCollection) {
- var currentLetter = currentCollection.splice([getRandomInt(0,currentCollection.length)],1);
-  console.log(currentLetter);
-  setAudioSource(currentLetter);
-  currentLetterClickableAndExplosion(currentLetter);
+function getActiveSelection (currentCollection) {
+ var activeSelection = currentCollection.splice([getRandomInt(0,currentCollection.length)],1);
+  console.log(activeSelection);
+  setAudioSource(activeSelection);
+  activeSelectionClickableAndExplosion(activeSelection);
 }
 
 function getRandomInt (min, max) {
@@ -39,17 +39,17 @@ function getRandomInt (min, max) {
   }
 }
 
-function setAudioSource (currentLetter) {
-  var source = document.getElementById("track").src = currentLetter + ".mp3";
+function setAudioSource (activeSelection) {
+  var source = document.getElementById("track").src = activeSelection + ".mp3";
   html_element = $(audio);
   html_element.load();
   console.log(source);
 }
 
-function currentLetterClickableAndExplosion (currentLetter) {
-  $("#" + currentLetter.toLowerCase() + ".letters").click(function() {
+function activeSelectionClickableAndExplosion (activeSelection) {
+  $("#" + activeSelection.toLowerCase() + ".letters").click(function() {
     $(this).attr('class', 'letters explode');
-    getCurrentLetter();
+    getActiveSelection();
   });
 }
 
