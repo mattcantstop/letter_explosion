@@ -5,7 +5,7 @@ var colors        = ["red","yellow","blue","green","pink","orange","brown","blac
 var shapes        = ["circle","square","rectangle","triangle","star","diamond","oval"];
 
 function processNewAndRemoveFormerCollection(collection) {
-  parentNodeId = "collection_container";
+  parentNodeId = "alphabetLower";
   removeCurrentCollection(parentNodeId);
   for (var i = 0; i < collection.length; i++) {
     createEachObjectDiv(collection[i], "collection_container");
@@ -16,7 +16,7 @@ function processNewAndRemoveFormerCollection(collection) {
 function createEachObjectDiv (objectFromCollection,parentDivId) {
   var childDiv = document.createElement("div");
   childDiv.className = "collection_object";
-  childDiv.id = objectFromCollection;
+  childDiv.id = parentDivId;
   childDiv.innerHTML = childDiv.innerHTML + objectFromCollection;
   document.getElementById(parentDivId).appendChild(childDiv);
 }
