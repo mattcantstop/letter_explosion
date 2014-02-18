@@ -14,6 +14,7 @@ function processNewAndRemoveFormerCollection(collection) {
 }
 
 function createEachObjectDiv (objectFromCollection,parentDivId) {
+  console.log(objectFromCollection);
   var childDiv = document.createElement("div");
   childDiv.className = "collection_object";
   childDiv.id = parentDivId;
