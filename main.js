@@ -17,6 +17,8 @@ function createEachObjectDiv (objectFromCollection,parentDivId) {
   var childDiv = document.createElement("div");
   childDiv.className = "collection_object";
   childDiv.id = parentDivId;
+  console.log('test it gets here');
+  testing.this
   childDiv.innerHTML = childDiv.innerHTML + objectFromCollection;
   document.getElementById(parentDivId).appendChild(childDiv);
 }
